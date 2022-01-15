@@ -10,11 +10,6 @@ function LunchCheckController($scope) {
   $scope.name = '';
   $scope.message = '';
 
-  // $scope.numberitems = function () {
-  //     var itemstring = $scope.name
-  //     var lunchItems = itemstring.split(",")
-  //     return length.lunchItems
-  //   };
 
     $scope.statement = function () {
       if ($scope.name.split(",")==0) {
