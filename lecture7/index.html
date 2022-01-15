@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1></h1>
+    <div id="target" ng-app="myTestApp" >
+      <section>Section
+        <article>
+Article
+        </article>
+      </section>
+
+    </div>
+    <script>
+      // var elem =document.getElementById('target');
+      // console.log(elem);
+      // console.log(elem.getAttribute('ng-app'));
+      var elem2=document.querySelector("[ng-app]");
+      console.log(elem2);
+      console.log(elem2.getAttribute('ng-app'));
+    </script>
+
+  </body>
+</html>
