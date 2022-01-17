@@ -3,7 +3,8 @@
 
   angular.module('MsgApp', [])
   .controller('MsgController', MsgController)
-  .filter('loves', LovesFilter);
+  .filter('loves', LovesFilter)
+  .filter('truth', TruthFilter);
 
   MsgController.$inject = ['$scope', 'lovesFilter'];
   function MsgController($scope, lovesFilter) {
@@ -11,14 +12,16 @@
     $scope.stateOfBeing = "happy";
 
     $scope.sayMessage = function () {
-      var msg = name + "likes to eat healthy snacks at night!";
-      return msg;
+      var msg = " likes to eat healthy snacks at night!";
+      var res= $scope.name +msg;
+      return res;
     };
 
     $scope.sayLovesMessage = function () {
-      var msg = name+ "likes to eat healthy snacks at night!";
+      var msg = " likes to eat healthy snacks at night!";
       msg = lovesFilter(msg)
-      return msg;
+      var res= $scope.name +msg;
+      return res;
     };
 
     $scope.feedCookieMonster = function () {
@@ -33,4 +36,11 @@
       return input;
     }
   }
+function TruthFilter(){
+  return function (input,target,replace){
+    input = input || "";
+    input = input.replace(target, replace);
+    return input;
+  }
+}
 })();
