@@ -1,0 +1,8 @@
+cd coursera-projects
+cd coursera-test
+browser-sync start --server --directory --files
+
+git add .
+git commit -m "week1 final task.2"
+git push
+git status
